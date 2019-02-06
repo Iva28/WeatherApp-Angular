@@ -1,0 +1,51 @@
+
+<div *ngIf='forecast' class="wrapper">
+  <div class='header'>
+      <strong>{{forecast.name}} Weather Forecast</strong>
+      <p>{{forecast.region}} {{forecast.country}}</p>
+  </div>
+    <div class='container'>
+      <div style='display:flex;'>
+          <div class='left'>
+               <div>
+                  <img src="{{forecast.icon}}">
+                  <span> {{forecast.condition}}</span>
+              </div>
+          </div>
+          <div class='right'>
+             <p>Wind: {{forecast.wind_kph}} kmph</p>
+             <p>Precip: {{forecast.precip_mm}} mm</p>
+             <p>Pressure: {{forecast.pressure_mb}} mb</p>
+             <p class='temp'>{{forecast.temp_c}} °C</p>
+          </div>
+      </div>
+      <div class='bottom'>
+        <div>
+          <p>{{forecast.days[0].date}}</p>
+          <img src='{{forecast.days[0].icon}}'>
+          <p>{{forecast.days[0].temp_c}} °C</p>
+        </div>
+        <div>
+          <p>{{forecast.days[1].date}}</p>
+          <img src='{{forecast.days[1].icon}}'>
+          <p>{{forecast.days[1].temp_c}} °c</p>
+        </div>
+        <div>
+          <p>{{forecast.days[2].date}}</p>
+          <img src='{{forecast.days[2].icon}}'>
+          <p>{{forecast.days[2].temp_c}} °c</p>
+        </div>
+        <div>
+          <p>{{forecast.days[3].date}}</p>
+          <img src='{{forecast.days[3].icon}}'>
+          <p>{{forecast.days[3].temp_c}} °c</p>
+        </div>
+        <div>
+          <p>{{forecast.days[4].date}}</p>
+          <img src='{{forecast.days[4].icon}}'>
+          <p>{{forecast.days[4].temp_c}} °c</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

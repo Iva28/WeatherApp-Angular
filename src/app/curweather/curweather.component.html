@@ -1,0 +1,13 @@
+<div *ngIf='isVisible'>
+    <p> Current Weather</p>
+    <div class='curWeather' *ngIf='curWeather'>
+      <button class="closeBtn" (click)='isVisible = false'>x</button>
+      <div>
+          <span>{{curWeather.name}}, {{curWeather.region}}, {{curWeather.country}}</span>
+          <div class='box'>
+            <img src='{{curWeather.icon}}'>
+            <span>{{curWeather.temp_c}} °c ({{curWeather.temp_f}} °f)</span>
+          </div>
+      </div>
+    </div>
+  </div>

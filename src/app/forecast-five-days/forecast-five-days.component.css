@@ -1,0 +1,81 @@
+.wrapper  {
+    cursor: default;
+}
+
+.container p, span {
+    color: white;
+}
+
+.header p {
+    font-size: 20px;
+}
+
+.header strong {
+    color: black;
+    font-size: 22px;
+}
+.container {
+    border-radius: 10px;
+    background-color: rgb(16, 32,45);
+    width: 500px;
+    height: 270px;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.container > div {
+    height: 50%;
+}
+
+.left {
+    width: 60%;  
+}
+
+.right {
+    width: 40%;
+    text-align: center;
+    font-size: 18px;
+    line-height: 3px;
+    padding-top: 15px;
+}
+
+.right p {
+    color: white;
+}
+
+.bottom{
+    display: flex;
+}
+
+.bottom > div {
+    width: 20%;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.temp {
+    font-size: 25px;
+}
+
+.bottom p {
+    margin: 0;
+}
+
+.left img {
+    height: 90px;
+    width: 90px;
+    margin:0 auto;
+    vertical-align: middle;
+}
+
+.left div {
+    margin: 20px auto;
+    height: 100px;
+    width: 250px;
+    text-align: center;
+}
+
+.left span {
+    font-size: 18px;
+}

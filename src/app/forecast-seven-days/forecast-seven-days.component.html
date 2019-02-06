@@ -1,0 +1,17 @@
+<div *ngIf='forecast'>
+    <p>Weather in {{forecast.name}}, {{forecast.region}}, {{forecast.country}} this weekend</p>
+    <div class='wrapper'>
+        <div (click)='curDay = day' *ngFor='let day of forecast.days' [class.activeday]='curDay == day' class='box day'>{{day.date}}</div>
+        <div class='sun'><span>Sunrise: {{curDay.sunrise}}</span><br/><span>Sunset: {{curDay.sunset}}</span></div>
+        <div class='moon'><span>Moonrise: {{curDay.moonrise}}</span><br/><span>Moonset: {{curDay.moonset}}</span> </div>
+        <div class='max'>Max: {{curDay.maxtemp_c}}°c</div>
+        <div class='min'>Min: {{curDay.mintemp_c}}°c</div>
+        <div class='avg'>Avg: {{curDay.avgtemp_c}}°c</div>
+        <div class='precip'>Precip: {{curDay.totalprecip_mm}} mm</div>
+        <div class='wind'>Max Wind: {{curDay.maxwind_kph}} kph</div>
+    </div>
+</div>
+
+<!--  <div *ngFor="let item of curDay | keyvalue" class='box'>
+    {{item.key}}:{{item.value}}
+  </div> -->

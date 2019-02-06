@@ -1,0 +1,75 @@
+p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(7, 150px);;
+  grid-gap: 1px;
+  width: 1056px;
+  border-bottom: 1px solid rgb(225,163,93);
+}
+
+.day {
+  cursor: pointer;
+}
+  
+.box {
+  background-color: rgb(163,210,171);
+  color: black;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  padding: 10px;
+  font-size: 17px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: left;
+}
+
+.day:hover {
+  color: white;
+}
+span {
+  white-space: nowrap;
+}
+
+.sun, .moon {
+  background-color: white;
+  border-left: 1px solid lightgrey;
+  padding: 7px;
+}
+
+.max{
+  padding: 7px;
+  background-color: rgb(232,217,126);
+
+}
+
+.min{
+  padding: 7px;
+  background-color: rgb(115,245,171);
+
+}
+
+.avg {
+  padding: 7px;
+  background-color: rgb(196,238,53);
+
+}
+
+.precip {
+  padding: 7px;
+  background-color: white;
+}
+
+.wind {
+  padding: 7px;
+  background-color: rgb(115,245,171);
+}
+
+.activeday {
+  background-color: rgb(52,152,3);
+  color: white;
+}

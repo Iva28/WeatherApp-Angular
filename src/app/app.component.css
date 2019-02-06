@@ -1,0 +1,36 @@
+.menu {
+    padding: 0;
+    list-style-type: none;
+}
+
+.menu > li {
+    float: left;
+}
+
+.menu::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.menu a {
+    padding: 10px 15px;
+    border: 1px solid gray;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu a:hover {
+    background-color: gray;
+    color: white;
+}
+
+
+.menu li:hover > ul {
+    display: block;
+}
+
+.active {
+    color: white;
+    background-color: gray;
+}
