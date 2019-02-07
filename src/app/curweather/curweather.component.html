@@ -1,6 +1,6 @@
-<div *ngIf='isVisible'>
+<div *ngIf='isVisible && curWeather'>
     <p> Current Weather</p>
-    <div class='curWeather' *ngIf='curWeather'>
+    <div class='curWeather'>
       <button class="closeBtn" (click)='isVisible = false'>x</button>
       <div>
           <span>{{curWeather.name}}, {{curWeather.region}}, {{curWeather.country}}</span>

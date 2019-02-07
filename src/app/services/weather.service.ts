@@ -14,13 +14,12 @@ import { DaySeven } from '../models/day-seven';
 export class WeatherService {
 
   private url = 'http://api.apixu.com/v1/';
-  private key = '*****';
   private city = 'Baku';
 
   constructor(private http: HttpClient) { }
 
   getCurWeather(): Observable<Curweather> {
-    return this.http.get<Curweather>(`${this.url}current.json?key=${this.key}&q=${this.city}`)
+    return this.http.get<Curweather>(`${this.url}current.json?q=${this.city}`)
     .pipe(map((data) => {
       return new Curweather(data['location']['name'],
       data['location']['region'],
@@ -32,7 +31,7 @@ export class WeatherService {
   }
 
   getForecastFiveDays(): Observable<ForecastFiveDays> {
-    return this.http.get<ForecastFiveDays>(`${this.url}forecast.json?key=${this.key}&q=${this.city}&days=5`)
+    return this.http.get<ForecastFiveDays>(`${this.url}forecast.json?q=${this.city}&days=5`)
     .pipe(map((data) => {
       const days: DayFive[] = [];
       data['forecast']['forecastday'].forEach((f) => {
@@ -53,7 +52,7 @@ export class WeatherService {
   }
 
   getForecastSevenDays(): Observable<ForecastSevenDays> {
-    return this.http.get<ForecastSevenDays>(`${this.url}forecast.json?key=${this.key}&q=${this.city}&days=7`)
+    return this.http.get<ForecastSevenDays>(`${this.url}forecast.json?q=${this.city}&days=7`)
     .pipe(map((data) => {
       const days: DaySeven[] = [];
       data['forecast']['forecastday'].forEach((f) => {

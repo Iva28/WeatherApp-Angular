@@ -20,30 +20,10 @@
           </div>
       </div>
       <div class='bottom'>
-        <div>
-          <p>{{forecast.days[0].date}}</p>
-          <img src='{{forecast.days[0].icon}}'>
-          <p>{{forecast.days[0].temp_c}} °C</p>
-        </div>
-        <div>
-          <p>{{forecast.days[1].date}}</p>
-          <img src='{{forecast.days[1].icon}}'>
-          <p>{{forecast.days[1].temp_c}} °c</p>
-        </div>
-        <div>
-          <p>{{forecast.days[2].date}}</p>
-          <img src='{{forecast.days[2].icon}}'>
-          <p>{{forecast.days[2].temp_c}} °c</p>
-        </div>
-        <div>
-          <p>{{forecast.days[3].date}}</p>
-          <img src='{{forecast.days[3].icon}}'>
-          <p>{{forecast.days[3].temp_c}} °c</p>
-        </div>
-        <div>
-          <p>{{forecast.days[4].date}}</p>
-          <img src='{{forecast.days[4].icon}}'>
-          <p>{{forecast.days[4].temp_c}} °c</p>
+        <div *ngFor='let day of forecast.days'>
+            <p>{{day.date}}</p>
+            <img src='{{day.icon}}'>
+            <p>{{day.temp_c}} °C</p>
         </div>
       </div>
     </div>
